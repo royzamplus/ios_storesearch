@@ -12,6 +12,11 @@ class SearchViewController: UIViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
+    @IBAction func segmentChanged(sender: UISegmentedControl) {
+       performSearch()
+    }
     
     var searchResults = [SearchResult]()
     var hasSearched = false
@@ -27,7 +32,7 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Tells the table view to add a 64-point margin at the top
-        tableView.contentInset = UIEdgeInsets(top: 64, left: 0, bottom: 0, right: 0)
+        tableView.contentInset = UIEdgeInsets(top: 108, left: 0, bottom: 0, right: 0)
         
         // Load nibs
         var cellNib = UINib(nibName: TableViewCellIdentifiers.searchResultCell, bundle: nil)
@@ -51,9 +56,17 @@ class SearchViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func urlWithSearchText(searchText: String) -> NSURL {
+    func urlWithSearchText(searchText: String, category: Int) -> NSURL {
+        var entityName: String
+        switch category {
+            case 1: entityName = "musicTrack"
+            case 2: entityName = "software"
+            case 3: entityName = "ebook"
+            default: entityName = ""
+        }
+        
         let escapedSearchText = searchText.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
-        let urlString = String(format: "http://itunes.apple.com/search?term=%@&limit=200", escapedSearchText)
+        let urlString = String(format: "http://itunes.apple.com/search?term=%@&limit=200&entity=%@", escapedSearchText, entityName)
         let url = NSURL(string: urlString)
         return url!
     }
@@ -210,7 +223,12 @@ class SearchViewController: UIViewController {
 }
 
 extension SearchViewController: UISearchBarDelegate {
+    
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        performSearch()
+    }
+    
+    func performSearch() {
         if !searchBar.text.isEmpty {
             searchBar.resignFirstResponder()
             
@@ -221,7 +239,8 @@ extension SearchViewController: UISearchBarDelegate {
             hasSearched = true        
             searchResults = [SearchResult]()
             
-            let url = self.urlWithSearchText(searchBar.text)
+            let url = self.urlWithSearchText(searchBar.text,
+                category: segmentedControl.selectedSegmentIndex)
             
             let session = NSURLSession.sharedSession()
             
