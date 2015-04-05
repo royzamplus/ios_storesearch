@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B449DCE1AD155B7004A09AA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B449DCD1AD155B7004A09AA /* DetailViewController.swift */; };
 		5B4D201A1AD001AD00E6BC9F /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B4D20191AD001AD00E6BC9F /* LoadingCell.xib */; };
 		5B5108181AD0ACEB001F8D14 /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5108171AD0ACEB001F8D14 /* UIImageView+DownloadImage.swift */; };
 		5BADA6051ACF56FE00C6ABAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BADA6041ACF56FE00C6ABAF /* AppDelegate.swift */; };
@@ -18,6 +19,7 @@
 		5BADA6271ACF68F300C6ABAF /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BADA6261ACF68F300C6ABAF /* SearchResultCell.xib */; };
 		5BADA6291ACF6EB500C6ABAF /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BADA6281ACF6EB500C6ABAF /* SearchResultCell.swift */; };
 		5BADA62B1ACF7D9900C6ABAF /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BADA62A1ACF7D9900C6ABAF /* NothingFoundCell.xib */; };
+		5BE84A721AD15AA400AF0315 /* DimmingPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE84A711AD15AA400AF0315 /* DimmingPresentationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B449DCD1AD155B7004A09AA /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		5B4D20191AD001AD00E6BC9F /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		5B5108171AD0ACEB001F8D14 /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
 		5BADA5FF1ACF56FE00C6ABAF /* StoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +49,7 @@
 		5BADA6261ACF68F300C6ABAF /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		5BADA6281ACF6EB500C6ABAF /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		5BADA62A1ACF7D9900C6ABAF /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
+		5BE84A711AD15AA400AF0315 /* DimmingPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DimmingPresentationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				5BADA6041ACF56FE00C6ABAF /* AppDelegate.swift */,
+				5B449DCD1AD155B7004A09AA /* DetailViewController.swift */,
+				5BE84A711AD15AA400AF0315 /* DimmingPresentationController.swift */,
 				5B4D20191AD001AD00E6BC9F /* LoadingCell.xib */,
 				5BADA6081ACF56FE00C6ABAF /* Main.storyboard */,
 				5BADA62A1ACF7D9900C6ABAF /* NothingFoundCell.xib */,
@@ -230,8 +236,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BADA6071ACF56FE00C6ABAF /* SearchViewController.swift in Sources */,
+				5BE84A721AD15AA400AF0315 /* DimmingPresentationController.swift in Sources */,
 				5BADA6251ACF60FD00C6ABAF /* SearchResult.swift in Sources */,
 				5BADA6291ACF6EB500C6ABAF /* SearchResultCell.swift in Sources */,
+				5B449DCE1AD155B7004A09AA /* DetailViewController.swift in Sources */,
 				5BADA6051ACF56FE00C6ABAF /* AppDelegate.swift in Sources */,
 				5B5108181AD0ACEB001F8D14 /* UIImageView+DownloadImage.swift in Sources */,
 			);
