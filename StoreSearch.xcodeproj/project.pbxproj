@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5B449DCE1AD155B7004A09AA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B449DCD1AD155B7004A09AA /* DetailViewController.swift */; };
+		5B4947F11AD2547600E4570B /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4947F01AD2547600E4570B /* Search.swift */; };
 		5B4D201A1AD001AD00E6BC9F /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B4D20191AD001AD00E6BC9F /* LoadingCell.xib */; };
 		5B4E72DF1AD1FA9400DFCFE3 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4E72DE1AD1FA9400DFCFE3 /* GradientView.swift */; };
 		5B4E72E11AD1FF5F00DFCFE3 /* BounceAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4E72E01AD1FF5F00DFCFE3 /* BounceAnimationController.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		5B449DCD1AD155B7004A09AA /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		5B4947F01AD2547600E4570B /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		5B4D20191AD001AD00E6BC9F /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		5B4E72DE1AD1FA9400DFCFE3 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		5B4E72E01AD1FF5F00DFCFE3 /* BounceAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BounceAnimationController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				5B4E72E21AD2035A00DFCFE3 /* SlideOutAnimationController.swift */,
 				5BADA6021ACF56FE00C6ABAF /* Supporting Files */,
 				5B5108171AD0ACEB001F8D14 /* UIImageView+DownloadImage.swift */,
+				5B4947F01AD2547600E4570B /* Search.swift */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B4947F11AD2547600E4570B /* Search.swift in Sources */,
 				5BADA6071ACF56FE00C6ABAF /* SearchViewController.swift in Sources */,
 				5BE84A721AD15AA400AF0315 /* DimmingPresentationController.swift in Sources */,
 				5B4E72E71AD20CF400DFCFE3 /* FadeOutAnimationController.swift in Sources */,
