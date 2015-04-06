@@ -105,7 +105,9 @@
 				5B4E72E01AD1FF5F00DFCFE3 /* BounceAnimationController.swift */,
 				5B449DCD1AD155B7004A09AA /* DetailViewController.swift */,
 				5BE84A711AD15AA400AF0315 /* DimmingPresentationController.swift */,
+				5B4E72E61AD20CF400DFCFE3 /* FadeOutAnimationController.swift */,
 				5B4E72DE1AD1FA9400DFCFE3 /* GradientView.swift */,
+				5B4E72E41AD2050E00DFCFE3 /* LandscapeViewController.swift */,
 				5B4D20191AD001AD00E6BC9F /* LoadingCell.xib */,
 				5BADA6081ACF56FE00C6ABAF /* Main.storyboard */,
 				5BADA62A1ACF7D9900C6ABAF /* NothingFoundCell.xib */,
@@ -116,8 +118,6 @@
 				5B4E72E21AD2035A00DFCFE3 /* SlideOutAnimationController.swift */,
 				5BADA6021ACF56FE00C6ABAF /* Supporting Files */,
 				5B5108171AD0ACEB001F8D14 /* UIImageView+DownloadImage.swift */,
-				5B4E72E41AD2050E00DFCFE3 /* LandscapeViewController.swift */,
-				5B4E72E61AD20CF400DFCFE3 /* FadeOutAnimationController.swift */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
