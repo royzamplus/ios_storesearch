@@ -113,6 +113,7 @@
 				5B4D20191AD001AD00E6BC9F /* LoadingCell.xib */,
 				5BADA6081ACF56FE00C6ABAF /* Main.storyboard */,
 				5BADA62A1ACF7D9900C6ABAF /* NothingFoundCell.xib */,
+				5B4947F01AD2547600E4570B /* Search.swift */,
 				5BADA6241ACF60FD00C6ABAF /* SearchResult.swift */,
 				5BADA6281ACF6EB500C6ABAF /* SearchResultCell.swift */,
 				5BADA6261ACF68F300C6ABAF /* SearchResultCell.xib */,
@@ -120,7 +121,6 @@
 				5B4E72E21AD2035A00DFCFE3 /* SlideOutAnimationController.swift */,
 				5BADA6021ACF56FE00C6ABAF /* Supporting Files */,
 				5B5108171AD0ACEB001F8D14 /* UIImageView+DownloadImage.swift */,
-				5B4947F01AD2547600E4570B /* Search.swift */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
