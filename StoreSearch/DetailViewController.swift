@@ -98,6 +98,17 @@ class DetailViewController: UIViewController {
 
 extension DetailViewController: UIViewControllerTransitioningDelegate {
     
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        return SlideOutAnimationController()
+    }
+    
+    // Tell the app to use the new animation controller when presenting the Detail pop-up
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        return BounceAnimationController()
+    }
+    
     // Tell UIKit what objects it should use to perform the transition to
     // the Detail View Controller
     func presentationControllerForPresentedViewController(
