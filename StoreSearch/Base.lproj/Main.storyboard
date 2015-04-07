@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qtb-4z-1gw">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
@@ -39,7 +39,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mdK-Ko-5g1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1137" y="1168"/>
+            <point key="canvasLocation" x="309" y="1340"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -113,7 +113,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1137" y="328"/>
+            <point key="canvasLocation" x="1001" y="792"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Qhu-yK-hjr">
+            <objects>
+                <navigationController id="PpU-48-wN2" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JwW-P4-aLC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="z7b-MQ-1aN" kind="relationship" relationship="rootViewController" id="YuE-8T-duz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gkU-j6-Iab" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1717" y="286"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="9WB-eD-4lE">
+            <objects>
+                <splitViewController id="qtb-4z-1gw" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="masterViewController" id="Zqs-Ox-4GU"/>
+                        <segue destination="PpU-48-wN2" kind="relationship" relationship="detailViewController" id="n4b-MR-yBT"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AoZ-Iu-YRF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="281" y="286"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="tU7-Ig-eXT">
@@ -230,6 +259,7 @@
                             <constraint firstAttribute="centerY" secondItem="kGX-7J-vjp" secondAttribute="centerY" id="sym-bg-spO"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="2Ch-my-qHs"/>
                     <connections>
                         <outlet property="artistNameLabel" destination="RaW-1H-Avx" id="sax-Fs-fmk"/>
                         <outlet property="artworkImageView" destination="haT-5q-7cc" id="KCL-bN-Pab"/>
@@ -242,7 +272,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tp3-Vd-iIl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1942" y="706"/>
+            <point key="canvasLocation" x="1717" y="1340"/>
         </scene>
     </scenes>
     <resources>
@@ -250,6 +280,6 @@
         <image name="PriceButton" width="11" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FiZ-hD-xB9"/>
+        <segue reference="YuE-8T-duz"/>
     </inferredMetricsTieBreakers>
 </document>
