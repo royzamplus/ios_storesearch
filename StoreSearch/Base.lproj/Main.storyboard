@@ -297,6 +297,15 @@
                                     </constraint>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="s6p-pQ-60S" secondAttribute="trailing" constant="10" id="zpm-9E-ek3"/>
                                 </constraints>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <mask key="subviews">
+                                        <exclude reference="3gh-cd-U4k"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="3mb-bn-5Wt"/>
+                                        <exclude reference="NrX-xL-DHL"/>
+                                    </mask>
+                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <mask key="subviews">
                                         <exclude reference="3gh-cd-U4k"/>
@@ -311,7 +320,9 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="kGX-7J-vjp" secondAttribute="centerX" id="B9e-BE-opm"/>
-                            <constraint firstAttribute="centerY" secondItem="kGX-7J-vjp" secondAttribute="centerY" id="sym-bg-spO"/>
+                            <constraint firstAttribute="centerY" secondItem="kGX-7J-vjp" secondAttribute="centerY" id="sym-bg-spO">
+                                <variation key="heightClass=compact-widthClass=regular" constant="-20"/>
+                            </constraint>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2Ch-my-qHs">
