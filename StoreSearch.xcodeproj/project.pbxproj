@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B27C2361AD418F100AB3818 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B27C2351AD418F100AB3818 /* MenuViewController.swift */; };
 		5B449DCE1AD155B7004A09AA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B449DCD1AD155B7004A09AA /* DetailViewController.swift */; };
 		5B4947F11AD2547600E4570B /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4947F01AD2547600E4570B /* Search.swift */; };
 		5B4E72DF1AD1FA9400DFCFE3 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4E72DE1AD1FA9400DFCFE3 /* GradientView.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B27C2351AD418F100AB3818 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		5B449DCD1AD155B7004A09AA /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		5B4947F01AD2547600E4570B /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		5B4E72DE1AD1FA9400DFCFE3 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				5B4E72E41AD2050E00DFCFE3 /* LandscapeViewController.swift */,
 				5B50C93A1AD2A4E800AC3ACF /* LoadingCell.xib */,
 				5BADA6081ACF56FE00C6ABAF /* Main.storyboard */,
+				5B27C2351AD418F100AB3818 /* MenuViewController.swift */,
 				5B50C9361AD2A38D00AC3ACF /* NothingFoundCell.xib */,
 				5B4947F01AD2547600E4570B /* Search.swift */,
 				5BADA6241ACF60FD00C6ABAF /* SearchResult.swift */,
@@ -270,6 +273,7 @@
 				5B4947F11AD2547600E4570B /* Search.swift in Sources */,
 				5BADA6071ACF56FE00C6ABAF /* SearchViewController.swift in Sources */,
 				5BE84A721AD15AA400AF0315 /* DimmingPresentationController.swift in Sources */,
+				5B27C2361AD418F100AB3818 /* MenuViewController.swift in Sources */,
 				5B4E72E71AD20CF400DFCFE3 /* FadeOutAnimationController.swift in Sources */,
 				5BADA6251ACF60FD00C6ABAF /* SearchResult.swift in Sources */,
 				5BADA6291ACF6EB500C6ABAF /* SearchResultCell.swift in Sources */,

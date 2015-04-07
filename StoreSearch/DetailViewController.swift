@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MessageUI
 
 class DetailViewController: UIViewController {
     
@@ -29,8 +30,16 @@ class DetailViewController: UIViewController {
         }
     }
     
-    var searchResult: SearchResult!
+    var searchResult: SearchResult! {
+        didSet {
+            if isViewLoaded() {
+                updateUI()
+            }
+        }
+    }
+    
     var downloadTask: NSURLSessionDownloadTask?
+    var isPopUp = false
     
     enum AnimationStyle {
         case Slide
@@ -51,10 +60,23 @@ class DetailViewController: UIViewController {
         view.tintColor = UIColor(red: 20/255, green: 160/255, blue: 160/255, alpha: 1)
         popupView.layer.cornerRadius = 10
         
-        let gestureRecognizer = UITapGestureRecognizer(target: self, action: Selector("close"))
-        gestureRecognizer.cancelsTouchesInView = false
-        gestureRecognizer.delegate = self
-        view.addGestureRecognizer(gestureRecognizer)
+        if isPopUp {
+            let gestureRecognizer = UITapGestureRecognizer(target: self, action: Selector("close"))
+            gestureRecognizer.cancelsTouchesInView = false
+            gestureRecognizer.delegate = self
+            view.addGestureRecognizer(gestureRecognizer)
+            
+            view.backgroundColor = UIColor.clearColor()
+        } else {
+            view.backgroundColor = UIColor(patternImage: UIImage(named: "LandscapeBackground")!)
+            
+            popupView.hidden = true
+            
+            if let displayName = NSBundle.mainBundle().localizedInfoDictionary?["CFBundleDisplayName"] as? NSString {
+                title = displayName
+            }
+        }
+        
         
         if searchResult != nil {
             updateUI()
@@ -66,6 +88,13 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ShowMenu" {
+            let controller = segue.destinationViewController as MenuViewController
+            controller.delegate = self
+        }
+    }
+    
     func updateUI() {
         nameLabel.text = searchResult.name
         
@@ -96,6 +125,8 @@ class DetailViewController: UIViewController {
         if let url = NSURL(string: searchResult.artworkURL100) {
             downloadTask = artworkImageView.loadImageWithURL(url)
         }
+        
+        popupView.hidden = false
     }
     
     deinit {
@@ -140,5 +171,25 @@ extension DetailViewController: UIGestureRecognizerDelegate {
     func gestureRecognizer(gestureRecognizer: UIGestureRecognizer,
         shouldReceiveTouch touch: UITouch) -> Bool {
         return (touch.view === view)
+    }
+}
+
+extension DetailViewController: MenuViewControllerDelegate {
+    func menuViewControllerSendSupportEmail(_: MenuViewController) {
+        dismissViewControllerAnimated(true) {
+            if MFMailComposeViewController.canSendMail() {
+                let controller = MFMailComposeViewController()
+                controller.setSubject(NSLocalizedString("Support Request", comment: "Email subject"))
+                controller.setToRecipients(["roy_radio@126.com"])
+                controller.mailComposeDelegate = self
+                self.presentViewController(controller, animated: true, completion: nil)
+            }
+        }
+    }
+}
+
+extension DetailViewController: MFMailComposeViewControllerDelegate {
+    func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
 }
